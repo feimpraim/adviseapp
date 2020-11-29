@@ -10,7 +10,7 @@ body {
 .app {
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("./images/city.jpg");
+    url("./images/bg.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -35,12 +35,14 @@ body {
   display: flex;
   align-items: center;
   height: 582px;
+  font-family: "Raleway", sans-serif;
 }
 
 .button {
   position: relative;
   outline: none;
   text-decoration: none;
+  text-decoration-color: #ffffff;
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -50,12 +52,12 @@ body {
   height: 200px;
   width: 210px;
   opacity: 1;
-  background-color: #ffffff;
-  border: 1px solid rgba(22, 76, 167, 0.6);
+  background-color: #022a80;
+  border: 1px solid rgba(148, 4, 184, 0.6);
 }
 
 .button span {
-  color: #164ca7;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.7px;
