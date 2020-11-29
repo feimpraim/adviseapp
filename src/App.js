@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import axios from 'axios';
+
+
 
 
 class App extends React.Component{
@@ -6,14 +9,35 @@ state ={advice:''};
 
 
 componentDidMount(){
-    
-    console.log('Component mounted');
+this.fetchAdvice();
 
 }
 
+fetchAdvice = ()=>{
+    axios.get('https://api.adviceslip.com/advice')
+    .then((response)=>{
+        const {advice} = response.data.slip;
+console.log(advice);
+this.setState({advice})
+    })
+    .catch((error)=>{
+console.log(error)
+    })
+    
+}
+
     render(){
+
+        const {advice} = this.state
         return(
-<h1>App</h1>
+
+            
+<div className="app">
+<div className = "card">
+<h1 className ='heading'>{advice}</h1>
+</div>
+
+</div>
         );
     }
 }
